@@ -1,0 +1,23 @@
+{
+  "name": "cypress_school",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "echo I am in Pre Test!",
+    "posttest": "echo I am in Post Test!",
+    "test": "echo I am in Test Itself!!",
+    "hello": "echo Hello World!!",
+    "cy-test": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.3.3",
+    "cypress-downloadfile": "^1.2.3"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8"
+  }
+}
