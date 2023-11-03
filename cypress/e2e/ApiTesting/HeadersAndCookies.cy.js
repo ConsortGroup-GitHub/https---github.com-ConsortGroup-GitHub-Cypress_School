@@ -19,6 +19,7 @@ describe('Api testing', () => {
         .then((response) => {
             authToken = response.body.accessToken
             cy.log("My Token is : "+authToken)
+            expect(response.status).to.eq(201)
         })
     })
 
@@ -61,5 +62,4 @@ describe('Api testing', () => {
             expect(response.body[0].id).to.eq(orderId)
         })
     })
-
 })

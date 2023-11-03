@@ -7,7 +7,4 @@ it('Login with valid credentials', () => {
     //cy.get('[data-test="password"]').type('secret_sauce{Enter}') //On simule la touche entrée, au lieu de cliquer sur le bouton Login
     // Custom timeout here:
     cy.get('[data-test="login-button"]', {timeout:5000}).click()
-
-
 })
-
