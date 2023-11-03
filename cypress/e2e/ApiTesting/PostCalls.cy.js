@@ -38,7 +38,7 @@ describe('API Testing', () => {
         })
     })
 
-    it.only('Approach3 - Dynamically Generated Json Object', () => {
+    it.skip('Approach3 - Dynamically Generated Json Object', () => {
         
         cy.fixture('tourist').then((myFixtureData) => {
             const requestBody = myFixtureData

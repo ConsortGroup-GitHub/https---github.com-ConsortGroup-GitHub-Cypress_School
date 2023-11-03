@@ -34,8 +34,8 @@ jobs:
         name: cypress-screenshots
         path: cypress/screenshot
     
-    - name: Merge test results into one
-      run: npm run report:merge
+    # - name: Merge test results into one
+    #   run: npm run report:merge
     
-    - name: Generate HTML report
-      run: npm run report:generate
+    # - name: Generate HTML report
+    #   run: npm run report:generate
