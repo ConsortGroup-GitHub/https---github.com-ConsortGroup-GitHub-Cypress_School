@@ -8,7 +8,8 @@
     "posttest": "echo I am in Post Test!",
     "test": "echo I am in Test Itself!!",
     "hello": "echo Hello World!!",
-    "cy-test": "cypress run"
+    "cy-test": "cypress run",
+    "cy-test-reporter": "cypress run --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,9 @@
     "ajv": "^8.12.0",
     "cypress": "^13.3.3",
     "cypress-downloadfile": "^1.2.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {

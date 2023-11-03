@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-11-03T15:53:03.613Z",
+    "end": "2023-11-03T15:53:04.328Z",
+    "duration": 715,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d491a24-c476-4fb6-88b9-adcb3bc700bf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ApiTesting\\PostCalls.cy.js",
+      "file": "cypress\\e2e\\ApiTesting\\PostCalls.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6fa5e793-e952-494c-b769-24b9c043a6ff",
+          "title": "API Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Approach2 - Dynamically Generated Json Object",
+              "fullTitle": "API Testing Approach2 - Dynamically Generated Json Object",
+              "timedOut": null,
+              "duration": 594,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const requestBody = {\n  tourist_name: Math.random().toString(5).substring(2),\n  tourist_email: Math.random().toString(5).substring(2) + \"@yopmail.com\",\n  tourist_location: \"Fretin\"\n};\ncy.request({\n  method: 'POST',\n  url: 'http://restapi.adequateshop.com/api/Tourist/',\n  body: requestBody\n}).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body.tourist_name).to.eq(requestBody.tourist_name);\n  expect(response.body.tourist_email).to.eq(requestBody.tourist_email);\n  expect(response.body.tourist_location).to.eq(requestBody.tourist_location);\n});",
+              "err": {},
+              "uuid": "086b88bb-0e2f-4e2e-963e-b28e4216978d",
+              "parentUUID": "6fa5e793-e952-494c-b769-24b9c043a6ff",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Approach3 - Dynamically Generated Json Object",
+              "fullTitle": "API Testing Approach3 - Dynamically Generated Json Object",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.fixture('tourist').then(myFixtureData => {\n  const requestBody = myFixtureData;\n  cy.request({\n    method: 'POST',\n    url: 'http://restapi.adequateshop.com/api/Tourist/',\n    body: requestBody\n  }).then(response => {\n    expect(response.status).to.eq(201);\n    expect(response.body.tourist_name).to.eq(requestBody.tourist_name);\n    expect(response.body.tourist_email).to.eq(requestBody.tourist_email);\n    expect(response.body.tourist_location).to.eq(requestBody.tourist_location);\n    expect(response.body).has.property('tourist_name', requestBody.tourist_name);\n    expect(response.body).has.property('tourist_email', requestBody.tourist_email);\n    expect(response.body).has.property('tourist_location', requestBody.tourist_location);\n  });\n});",
+              "err": {},
+              "uuid": "7bf6c74e-8fc0-484e-9005-5bd2c59ab775",
+              "parentUUID": "6fa5e793-e952-494c-b769-24b9c043a6ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "086b88bb-0e2f-4e2e-963e-b28e4216978d"
+          ],
+          "failures": [],
+          "pending": [
+            "7bf6c74e-8fc0-484e-9005-5bd2c59ab775"
+          ],
+          "skipped": [],
+          "duration": 594,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

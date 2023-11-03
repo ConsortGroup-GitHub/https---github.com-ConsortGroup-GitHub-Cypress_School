@@ -25,7 +25,7 @@ jobs:
       run: npm install
 
     - name: Run Cypress Tests
-      run: npm run cy-test  # Bien s assurer que cette commande existe dans le package.json
+      run: npm run cy-test-reporter  # Bien s assurer que cette commande existe dans le package.json
 
     - name: Upload Test Artifacts
       if: failure() 
@@ -34,8 +34,8 @@ jobs:
         name: cypress-screenshots
         path: cypress/screenshot
     
-    # - name: Merge test results into one
-    #   run: npm run report:merge
+    - name: Merge test results into one
+      run: npm run report:merge
     
-    # - name: Generate HTML report
-    #   run: npm run report:generate
+    - name: Generate HTML report
+      run: npm run report:generate

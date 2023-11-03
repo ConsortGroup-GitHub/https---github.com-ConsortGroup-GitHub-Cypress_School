@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-03T15:52:57.278Z",
+    "end": "2023-11-03T15:52:57.547Z",
+    "duration": 269,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d6d7447-327a-4806-adb1-368816062e68",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ApiTesting\\ParsingJsonResponse.cy.js",
+      "file": "cypress\\e2e\\ApiTesting\\ParsingJsonResponse.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ec6fe85-030f-4b29-9131-955493bfff47",
+          "title": "Parsing Json Response",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Parsing complex JSON response",
+              "fullTitle": "Parsing Json Response Parsing complex JSON response",
+              "timedOut": null,
+              "duration": 213,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let totalprice = 0;\ncy.request({\n  method: 'GET',\n  url: \"https://fakestoreapi.com/products\",\n  qs: {\n    limit: 5\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  response.body.forEach(element => {\n    totalprice = totalprice + element.price;\n  });\n  expect(totalprice).to.eq(899.23);\n});",
+              "err": {},
+              "uuid": "90c321b3-3e7b-4ba5-bbe0-a8d8c1bd3599",
+              "parentUUID": "7ec6fe85-030f-4b29-9131-955493bfff47",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90c321b3-3e7b-4ba5-bbe0-a8d8c1bd3599"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 213,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

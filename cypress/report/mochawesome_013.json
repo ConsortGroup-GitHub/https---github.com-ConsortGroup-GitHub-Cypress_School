@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-03T15:53:06.624Z",
+    "end": "2023-11-03T15:53:06.891Z",
+    "duration": 267,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c393c84c-8d06-4147-91a7-5d7da8437dbe",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ApiTesting\\QueryParams.cy.js",
+      "file": "cypress\\e2e\\ApiTesting\\QueryParams.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0f732436-3f92-4bc4-afbb-aab0c288f1e3",
+          "title": "API Reqres Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Passing Query parameters",
+              "fullTitle": "API Reqres Testing Passing Query parameters",
+              "timedOut": null,
+              "duration": 208,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://reqres.in/api/users',\n  qs: queryParams\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.per_page).to.eq(6);\n  expect(response.body.data[0].first_name).to.eq('Michael');\n  expect(response.body.data[0]).has.property('first_name', 'Michael');\n  expect(response.body.data[0].last_name).to.eq('Lawson');\n  expect(response.body.data[1].first_name).to.eq('Lindsay');\n  expect(response.body.data[1].last_name).to.eq('Ferguson');\n  expect(response.body.data).has.length(6);\n});",
+              "err": {},
+              "uuid": "f800cad6-6832-43bf-92e6-a29f0e8b2966",
+              "parentUUID": "0f732436-3f92-4bc4-afbb-aab0c288f1e3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f800cad6-6832-43bf-92e6-a29f0e8b2966"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 208,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
