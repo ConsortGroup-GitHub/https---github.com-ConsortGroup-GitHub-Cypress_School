@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
+    
+    - name: clear cache
+      run: npm cache clean --force 
 
     - name: Setup Node.js
       uses: actions/setup-node@v2
