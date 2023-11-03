@@ -1,19 +1,32 @@
-name: Cypress Tests using Cypress Docker Image
+name: Cypress Tests
 
-on: push
+on:
+  push:
+    branches:
+      - main  # Exécute les tests lorsque vous poussez sur la branche principale
 
 jobs:
-  cypress-run:
-    runs-on: ubuntu-22.04
-    container:
-      image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
-      options: --user 1001
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          build: npm run build
-          start: npm start
-          browser: chrome
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Cypress Tests
+      run: npm run cy-test  # Assurez-vous que cette commande correspond à votre configuration
+
+    - name: Upload Test Artifacts
+      if: failure() 
+      uses: actions/upload-artifact@v2
+      with:
+        name: cypress-screenshots
+        path: cypress/screenshots
