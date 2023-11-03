@@ -1,0 +1,41 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main  # Exécute les tests lorsque vous poussez sur la branche principale
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    
+    - name: clear cache
+      run: npm cache clean --force 
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14 # minimum pour cypress version 13  
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Cypress Tests
+      run: npm run cy-test  # Bien s assurer que cette commande existe dans le package.json
+
+    - name: Upload Test Artifacts
+      if: failure() 
+      uses: actions/upload-artifact@v2
+      with:
+        name: cypress-screenshots
+        path: cypress/screenshot
+    
+    - name: Merge test results into one
+      run: npm run report:merge
+    
+    - name: Generate HTML report
+      run: npm run report:generate
