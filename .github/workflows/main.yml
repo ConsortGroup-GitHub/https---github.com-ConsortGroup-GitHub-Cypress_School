@@ -19,7 +19,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 16 # minimum pour cypress version 13  
+        node-version: 14 # minimum pour cypress version 13  
 
     - name: Install Dependencies
       run: npm install
