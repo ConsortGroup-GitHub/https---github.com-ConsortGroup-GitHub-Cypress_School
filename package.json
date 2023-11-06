@@ -9,7 +9,9 @@
     "test": "echo I am in Test Itself!!",
     "hello": "echo Hello World!!",
     "cy-test": "cypress run",
-    "cy-test-reporter": "cypress run --reporter mochawesome"
+    "cy-test-reporter": "cypress run --reporter mochawesome",
+    "report:merge": "mochawesome-merge cypress/results/*.json -o cypress/report.json",
+    "report:generate": "marge cypress/report.json --charts true"
   },
   "keywords": [],
   "author": "",
