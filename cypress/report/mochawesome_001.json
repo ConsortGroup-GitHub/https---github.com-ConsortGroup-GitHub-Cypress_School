@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-03T15:52:14.197Z",
-    "end": "2023-11-03T15:52:18.052Z",
-    "duration": 3855,
+    "start": "2023-11-06T08:30:45.704Z",
+    "end": "2023-11-06T08:30:49.796Z",
+    "duration": 4092,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b1ec3e18-efb9-4732-9e5b-3afbbef51487",
+      "uuid": "25b21088-7031-4cb9-8025-ec4b6988c2af",
       "title": "",
       "fullFile": "cypress\\e2e\\fileuploaddownloaddemo.cy.js",
       "file": "cypress\\e2e\\fileuploaddownloaddemo.cy.js",
@@ -29,7 +29,7 @@
           "title": "File Upload test",
           "fullTitle": "File Upload test",
           "timedOut": null,
-          "duration": 417,
+          "duration": 512,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,8 +38,8 @@
           "context": null,
           "code": "cy.visit('https://trytestingthis.netlify.app/');\ncy.get('#myfile').attachFile('example.json'); //Le nom du fichier à uploader suffit s'il est dans le folder 'fixtures'",
           "err": {},
-          "uuid": "1c136b5d-3005-4fcf-b583-2cc036a11714",
-          "parentUUID": "b1ec3e18-efb9-4732-9e5b-3afbbef51487",
+          "uuid": "3c7c551f-001e-447c-9100-9c2d29b0230c",
+          "parentUUID": "25b21088-7031-4cb9-8025-ec4b6988c2af",
           "isHook": false,
           "skipped": false
         },
@@ -47,7 +47,7 @@
           "title": "File Download test",
           "fullTitle": "File Download test",
           "timedOut": null,
-          "duration": 231,
+          "duration": 241,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -56,21 +56,21 @@
           "context": null,
           "code": "cy.downloadFile('https://consort-group.com/wp-content/uploads/2023/06/Systeme-u-redimensionne.png', 'mydownloads', 'example.jpg');",
           "err": {},
-          "uuid": "28d1e9fc-017b-4d8d-a91b-70299f53e76c",
-          "parentUUID": "b1ec3e18-efb9-4732-9e5b-3afbbef51487",
+          "uuid": "3cc53be5-6b2c-4b36-822f-a4c25c935cd7",
+          "parentUUID": "25b21088-7031-4cb9-8025-ec4b6988c2af",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "1c136b5d-3005-4fcf-b583-2cc036a11714",
-        "28d1e9fc-017b-4d8d-a91b-70299f53e76c"
+        "3c7c551f-001e-447c-9100-9c2d29b0230c",
+        "3cc53be5-6b2c-4b36-822f-a4c25c935cd7"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 648,
+      "duration": 753,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000
@@ -84,7 +84,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -96,7 +96,7 @@
       "options": {
         "charts": true,
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true,
         "reportDir": "cypress/report"
       },

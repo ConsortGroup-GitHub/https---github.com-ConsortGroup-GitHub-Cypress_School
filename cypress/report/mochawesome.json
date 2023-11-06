@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-03T15:52:08.651Z",
-    "end": "2023-11-03T15:52:11.935Z",
-    "duration": 3284,
+    "start": "2023-11-06T08:30:35.904Z",
+    "end": "2023-11-06T08:30:42.159Z",
+    "duration": 6255,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1dc4df7d-b8c0-419a-bd18-0cabfb7893ff",
+      "uuid": "18f2f404-5b89-4caa-ad71-d9f522dec923",
       "title": "",
       "fullFile": "cypress\\e2e\\assertionsdemo.cy.js",
       "file": "cypress\\e2e\\assertionsdemo.cy.js",
@@ -29,7 +29,7 @@
           "title": "Assertions Demo",
           "fullTitle": "Assertions Demo",
           "timedOut": null,
-          "duration": 999,
+          "duration": 2350,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,20 +38,20 @@
           "context": null,
           "code": "cy.visit('https://example.cypress.io');\ncy.contains('get').click();\n// implicit assertions ('should', 'and'):\ncy.get('#query-btn').should('contain', 'Button').and('have.class', 'query-btn').and('be.visible').and('be.not.disabled').and('be.enabled');\n// explicit assertions ('expect', 'assert'):\nexpect(true).to.be.true;\nlet myName = 'Nowak';\nexpect(myName).to.be.equal('Nowak');\nassert.equal(4, '4', 'NOT EQUAL');\n// assert.strictEqual(4, '4', 'NOT EQUAL')\nassert.isNumber(4);\n// assert.isNumber('4')",
           "err": {},
-          "uuid": "34df30a2-75b0-4071-aa93-211402b5f45e",
-          "parentUUID": "1dc4df7d-b8c0-419a-bd18-0cabfb7893ff",
+          "uuid": "d36699c0-8c9e-45e2-87e0-b71cb1185b3d",
+          "parentUUID": "18f2f404-5b89-4caa-ad71-d9f522dec923",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "34df30a2-75b0-4071-aa93-211402b5f45e"
+        "d36699c0-8c9e-45e2-87e0-b71cb1185b3d"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 999,
+      "duration": 2350,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000
@@ -65,7 +65,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -77,7 +77,7 @@
       "options": {
         "charts": true,
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true,
         "reportDir": "cypress/report"
       },

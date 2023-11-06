@@ -11,7 +11,7 @@ module.exports = defineConfig({
     "reporterOptions": {
       "charts": true,
       "overwrite": false,
-      "html": true,
+      "html": false,
       "json": true,
       "reportDir": "cypress/report"
     },

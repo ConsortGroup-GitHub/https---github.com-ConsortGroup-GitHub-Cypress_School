@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-03T15:52:44.674Z",
-    "end": "2023-11-03T15:52:45.518Z",
-    "duration": 844,
+    "start": "2023-11-06T08:31:28.898Z",
+    "end": "2023-11-06T08:31:29.880Z",
+    "duration": 982,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e7a703d6-2b3b-4c1b-932a-c0e47cf91025",
+      "uuid": "f736634d-7d35-41d8-b404-d5c29a62efec",
       "title": "",
       "fullFile": "cypress\\e2e\\ApiTesting\\AuthenticationTypes.cy.js",
       "file": "cypress\\e2e\\ApiTesting\\AuthenticationTypes.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0a97a35c-9cc5-4f13-81ca-00373533ef51",
+          "uuid": "6d58600d-17c8-407e-9867-a254f37c60b2",
           "title": "Different types of Authentication",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Basic Authentication",
               "fullTitle": "Different types of Authentication Basic Authentication",
               "timedOut": null,
-              "duration": 618,
+              "duration": 702,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: 'https://postman-echo.com/basic-auth',\n  auth: {\n    user: 'postman',\n    pass: 'password'\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.authenticated).to.be.true;\n});",
               "err": {},
-              "uuid": "034d057e-51ba-423c-9f17-8cf79e4746ba",
-              "parentUUID": "0a97a35c-9cc5-4f13-81ca-00373533ef51",
+              "uuid": "be9aa3f7-ff35-4924-9dd8-ca7ffba694cb",
+              "parentUUID": "6d58600d-17c8-407e-9867-a254f37c60b2",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Digest Authentication",
               "fullTitle": "Different types of Authentication Digest Authentication",
               "timedOut": null,
-              "duration": 164,
+              "duration": 166,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: 'https://postman-echo.com/basic-auth',\n  auth: {\n    username: 'postman',\n    password: 'password',\n    method: 'digest'\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.authenticated).to.be.true;\n});",
               "err": {},
-              "uuid": "3496d9e3-6624-490d-aaa9-2534de7989a1",
-              "parentUUID": "0a97a35c-9cc5-4f13-81ca-00373533ef51",
+              "uuid": "fcc37cfa-295d-48ec-81c9-3ca6b30aea70",
+              "parentUUID": "6d58600d-17c8-407e-9867-a254f37c60b2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "034d057e-51ba-423c-9f17-8cf79e4746ba",
-            "3496d9e3-6624-490d-aaa9-2534de7989a1"
+            "be9aa3f7-ff35-4924-9dd8-ca7ffba694cb",
+            "fcc37cfa-295d-48ec-81c9-3ca6b30aea70"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 782,
+          "duration": 868,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -103,7 +103,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -115,7 +115,7 @@
       "options": {
         "charts": true,
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true,
         "reportDir": "cypress/report"
       },

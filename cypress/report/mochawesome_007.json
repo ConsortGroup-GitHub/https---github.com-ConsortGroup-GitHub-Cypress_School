@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-03T15:52:47.673Z",
-    "end": "2023-11-03T15:52:49.146Z",
-    "duration": 1473,
+    "start": "2023-11-06T08:31:32.885Z",
+    "end": "2023-11-06T08:31:34.651Z",
+    "duration": 1766,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b4fc39e9-8e0f-4172-9c64-2cff4c20f4fa",
+      "uuid": "6cb05426-f226-475d-8668-6e7b99b10d28",
       "title": "",
       "fullFile": "cypress\\e2e\\ApiTesting\\HeadersAndCookies.cy.js",
       "file": "cypress\\e2e\\ApiTesting\\HeadersAndCookies.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "78059f38-22ee-4a6c-92e4-6b156c232216",
+          "uuid": "2300f56b-e2e5-421f-aeae-9af1040f3267",
           "title": "Api testing",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Get all orders",
               "fullTitle": "Api testing Get all orders",
               "timedOut": null,
-              "duration": 1422,
+              "duration": 1663,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: 'https://simple-books-api.glitch.me/orders/',\n  headers: {\n    'Content-Type': 'application/json',\n    'Authorization': \"Bearer \" + authToken\n  },\n  cookies: {\n    'cookieName': 'mycookie'\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).has.length(1);\n  expect(response.body[0].id).to.eq(orderId);\n});",
               "err": {},
-              "uuid": "21502283-7cac-4ec9-8dff-ce670cd58d19",
-              "parentUUID": "78059f38-22ee-4a6c-92e4-6b156c232216",
+              "uuid": "db28b5e3-6617-4c6b-abc5-74e9c22cc030",
+              "parentUUID": "2300f56b-e2e5-421f-aeae-9af1040f3267",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "21502283-7cac-4ec9-8dff-ce670cd58d19"
+            "db28b5e3-6617-4c6b-abc5-74e9c22cc030"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1422,
+          "duration": 1663,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -84,7 +84,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -96,7 +96,7 @@
       "options": {
         "charts": true,
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true,
         "reportDir": "cypress/report"
       },
