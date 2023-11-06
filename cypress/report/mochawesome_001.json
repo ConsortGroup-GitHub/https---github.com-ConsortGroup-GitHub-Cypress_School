@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T08:30:45.704Z",
-    "end": "2023-11-06T08:30:49.796Z",
-    "duration": 4092,
+    "start": "2023-11-06T10:44:18.209Z",
+    "end": "2023-11-06T10:44:21.460Z",
+    "duration": 3251,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "25b21088-7031-4cb9-8025-ec4b6988c2af",
+      "uuid": "3bb8b418-453d-4071-8cb2-d7182715c8f4",
       "title": "",
       "fullFile": "cypress\\e2e\\fileuploaddownloaddemo.cy.js",
       "file": "cypress\\e2e\\fileuploaddownloaddemo.cy.js",
@@ -29,7 +29,7 @@
           "title": "File Upload test",
           "fullTitle": "File Upload test",
           "timedOut": null,
-          "duration": 512,
+          "duration": 422,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,8 +38,8 @@
           "context": null,
           "code": "cy.visit('https://trytestingthis.netlify.app/');\ncy.get('#myfile').attachFile('example.json'); //Le nom du fichier à uploader suffit s'il est dans le folder 'fixtures'",
           "err": {},
-          "uuid": "3c7c551f-001e-447c-9100-9c2d29b0230c",
-          "parentUUID": "25b21088-7031-4cb9-8025-ec4b6988c2af",
+          "uuid": "0182d266-9742-4334-802f-7dce1594ff85",
+          "parentUUID": "3bb8b418-453d-4071-8cb2-d7182715c8f4",
           "isHook": false,
           "skipped": false
         },
@@ -47,7 +47,7 @@
           "title": "File Download test",
           "fullTitle": "File Download test",
           "timedOut": null,
-          "duration": 241,
+          "duration": 299,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -56,21 +56,21 @@
           "context": null,
           "code": "cy.downloadFile('https://consort-group.com/wp-content/uploads/2023/06/Systeme-u-redimensionne.png', 'mydownloads', 'example.jpg');",
           "err": {},
-          "uuid": "3cc53be5-6b2c-4b36-822f-a4c25c935cd7",
-          "parentUUID": "25b21088-7031-4cb9-8025-ec4b6988c2af",
+          "uuid": "91ebbe19-c2f4-4fd6-8ac1-456164fa8cae",
+          "parentUUID": "3bb8b418-453d-4071-8cb2-d7182715c8f4",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "3c7c551f-001e-447c-9100-9c2d29b0230c",
-        "3cc53be5-6b2c-4b36-822f-a4c25c935cd7"
+        "0182d266-9742-4334-802f-7dce1594ff85",
+        "91ebbe19-c2f4-4fd6-8ac1-456164fa8cae"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 753,
+      "duration": 721,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000

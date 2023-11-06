@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T08:31:32.885Z",
-    "end": "2023-11-06T08:31:34.651Z",
-    "duration": 1766,
+    "start": "2023-11-06T10:44:50.216Z",
+    "end": "2023-11-06T10:44:51.905Z",
+    "duration": 1689,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6cb05426-f226-475d-8668-6e7b99b10d28",
+      "uuid": "6a377673-1e50-4676-987b-dfe06149673a",
       "title": "",
       "fullFile": "cypress\\e2e\\ApiTesting\\HeadersAndCookies.cy.js",
       "file": "cypress\\e2e\\ApiTesting\\HeadersAndCookies.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2300f56b-e2e5-421f-aeae-9af1040f3267",
+          "uuid": "dc4877de-3640-47ad-9652-49f84345fcc2",
           "title": "Api testing",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Get all orders",
               "fullTitle": "Api testing Get all orders",
               "timedOut": null,
-              "duration": 1663,
+              "duration": 1651,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: 'https://simple-books-api.glitch.me/orders/',\n  headers: {\n    'Content-Type': 'application/json',\n    'Authorization': \"Bearer \" + authToken\n  },\n  cookies: {\n    'cookieName': 'mycookie'\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).has.length(1);\n  expect(response.body[0].id).to.eq(orderId);\n});",
               "err": {},
-              "uuid": "db28b5e3-6617-4c6b-abc5-74e9c22cc030",
-              "parentUUID": "2300f56b-e2e5-421f-aeae-9af1040f3267",
+              "uuid": "b0986126-ee32-491a-b5ad-04aee12885bb",
+              "parentUUID": "dc4877de-3640-47ad-9652-49f84345fcc2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "db28b5e3-6617-4c6b-abc5-74e9c22cc030"
+            "b0986126-ee32-491a-b5ad-04aee12885bb"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1663,
+          "duration": 1651,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T08:31:19.284Z",
-    "end": "2023-11-06T08:31:25.599Z",
-    "duration": 6315,
+    "start": "2023-11-06T10:44:40.918Z",
+    "end": "2023-11-06T10:44:45.305Z",
+    "duration": 4387,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "227ae64d-8294-447f-8b2a-ad80fbac8cd5",
+      "uuid": "f7428d45-f0da-47fc-b67d-6843a0418d3c",
       "title": "",
       "fullFile": "cypress\\e2e\\test1.cy.js",
       "file": "cypress\\e2e\\test1.cy.js",
@@ -29,7 +29,7 @@
           "title": "Login with valid credentials",
           "fullTitle": "Login with valid credentials",
           "timedOut": null,
-          "duration": 2987,
+          "duration": 2222,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,20 +38,20 @@
           "context": null,
           "code": "cy.visit('https://www.saucedemo.com/');\ncy.get('[data-test=\"username\"]').type('standard_user');\ncy.get('[data-test=\"password\"]').type('secret_sauce');\n//cy.get('[data-test=\"password\"]').type('secret_sauce{Enter}') //On simule la touche entrée, au lieu de cliquer sur le bouton Login\n// Custom timeout here:\ncy.get('[data-test=\"login-button\"]', {\n  timeout: 5000\n}).click();",
           "err": {},
-          "uuid": "459b22b6-bf06-4bc4-8c85-608bcd62224c",
-          "parentUUID": "227ae64d-8294-447f-8b2a-ad80fbac8cd5",
+          "uuid": "4a19a9ca-eb5e-46c5-9825-12b57acf16af",
+          "parentUUID": "f7428d45-f0da-47fc-b67d-6843a0418d3c",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "459b22b6-bf06-4bc4-8c85-608bcd62224c"
+        "4a19a9ca-eb5e-46c5-9825-12b57acf16af"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 2987,
+      "duration": 2222,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000

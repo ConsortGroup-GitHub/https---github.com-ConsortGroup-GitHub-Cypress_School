@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T08:30:35.904Z",
-    "end": "2023-11-06T08:30:42.159Z",
-    "duration": 6255,
+    "start": "2023-11-06T10:44:13.351Z",
+    "end": "2023-11-06T10:44:16.307Z",
+    "duration": 2956,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "18f2f404-5b89-4caa-ad71-d9f522dec923",
+      "uuid": "d4a58a0e-5302-4909-a7c0-6fd9cfc6759f",
       "title": "",
       "fullFile": "cypress\\e2e\\assertionsdemo.cy.js",
       "file": "cypress\\e2e\\assertionsdemo.cy.js",
@@ -29,7 +29,7 @@
           "title": "Assertions Demo",
           "fullTitle": "Assertions Demo",
           "timedOut": null,
-          "duration": 2350,
+          "duration": 830,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,20 +38,20 @@
           "context": null,
           "code": "cy.visit('https://example.cypress.io');\ncy.contains('get').click();\n// implicit assertions ('should', 'and'):\ncy.get('#query-btn').should('contain', 'Button').and('have.class', 'query-btn').and('be.visible').and('be.not.disabled').and('be.enabled');\n// explicit assertions ('expect', 'assert'):\nexpect(true).to.be.true;\nlet myName = 'Nowak';\nexpect(myName).to.be.equal('Nowak');\nassert.equal(4, '4', 'NOT EQUAL');\n// assert.strictEqual(4, '4', 'NOT EQUAL')\nassert.isNumber(4);\n// assert.isNumber('4')",
           "err": {},
-          "uuid": "d36699c0-8c9e-45e2-87e0-b71cb1185b3d",
-          "parentUUID": "18f2f404-5b89-4caa-ad71-d9f522dec923",
+          "uuid": "8e95e79e-433f-46a7-9300-d38992d5290d",
+          "parentUUID": "d4a58a0e-5302-4909-a7c0-6fd9cfc6759f",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "d36699c0-8c9e-45e2-87e0-b71cb1185b3d"
+        "8e95e79e-433f-46a7-9300-d38992d5290d"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 2350,
+      "duration": 830,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000

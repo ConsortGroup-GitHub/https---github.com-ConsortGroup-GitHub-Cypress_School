@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T08:31:43.022Z",
-    "end": "2023-11-06T08:31:43.683Z",
-    "duration": 661,
+    "start": "2023-11-06T10:44:56.881Z",
+    "end": "2023-11-06T10:44:57.339Z",
+    "duration": 458,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "833c1481-db52-458b-8d2c-de5e546a4867",
+      "uuid": "96af9841-4615-4d0b-a0ce-33f47518a33f",
       "title": "",
       "fullFile": "cypress\\e2e\\ApiTesting\\JsonSchemaValidation.cy.js",
       "file": "cypress\\e2e\\ApiTesting\\JsonSchemaValidation.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cc446e06-2df8-43e4-a876-eb5b7ac20f51",
+          "uuid": "b14652ea-787d-42ab-b1d7-d8598c73ff5b",
           "title": "Schema Validation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Schema Validation against Response",
               "fullTitle": "Schema Validation Schema Validation against Response",
               "timedOut": null,
-              "duration": 494,
+              "duration": 420,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: 'https://fakestoreapi.com/products'\n}).then(response => {\n  var schema = {\n    \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n    \"title\": \"Generated schema for Root\",\n    \"type\": \"array\",\n    \"items\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"number\"\n        },\n        \"title\": {\n          \"type\": \"string\"\n        },\n        \"price\": {\n          \"type\": \"number\"\n        },\n        \"description\": {\n          \"type\": \"string\"\n        },\n        \"category\": {\n          \"type\": \"string\"\n        },\n        \"image\": {\n          \"type\": \"string\"\n        },\n        \"rating\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"rate\": {\n              \"type\": \"number\"\n            },\n            \"count\": {\n              \"type\": \"number\"\n            }\n          },\n          \"required\": [\"rate\", \"count\"]\n        }\n      },\n      \"required\": [\"id\", \"title\", \"price\", \"description\", \"category\", \"image\", \"rating\"]\n    }\n  };\n  const validate = ajv.compile(schema);\n  const isvalid = validate(response.body);\n  expect(isvalid).to.be.true;\n});",
               "err": {},
-              "uuid": "08747bb0-ccb3-4e43-8169-70113c81dbef",
-              "parentUUID": "cc446e06-2df8-43e4-a876-eb5b7ac20f51",
+              "uuid": "019dccec-7241-46f9-8131-6ddcbb9abd3a",
+              "parentUUID": "b14652ea-787d-42ab-b1d7-d8598c73ff5b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "08747bb0-ccb3-4e43-8169-70113c81dbef"
+            "019dccec-7241-46f9-8131-6ddcbb9abd3a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 494,
+          "duration": 420,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

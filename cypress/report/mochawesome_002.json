@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T08:30:53.266Z",
-    "end": "2023-11-06T08:31:05.086Z",
-    "duration": 11820,
+    "start": "2023-11-06T10:44:24.036Z",
+    "end": "2023-11-06T10:44:32.257Z",
+    "duration": 8221,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3ce3e226-8893-4121-af24-137c9ae8aa24",
+      "uuid": "c0542ffa-2fc9-4c1a-894f-1a18ca6d23f0",
       "title": "",
       "fullFile": "cypress\\e2e\\pomDemo.cy.js",
       "file": "cypress\\e2e\\pomDemo.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e9a064f6-151c-4465-bbc8-eaebe4b65284",
+          "uuid": "5f33bfdc-9bc5-451b-9364-c5b9a7b0a516",
           "title": "All Login Tests",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,17 @@
               "title": "Login with valid credentials and Leave - POM",
               "fullTitle": "All Login Tests Login with valid credentials and Leave - POM",
               "timedOut": null,
-              "duration": 5261,
+              "duration": 4346,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "loginPage.enterUsername('Admin');\nloginPage.enterPassword('admin123');\nloginPage.clickLogin();\nhomePage.Leave();",
               "err": {},
-              "uuid": "4c2c01ae-bc3b-4788-b359-d2d19fac5eff",
-              "parentUUID": "e9a064f6-151c-4465-bbc8-eaebe4b65284",
+              "uuid": "80604d09-391a-41ad-a238-7d7e9f376e6d",
+              "parentUUID": "5f33bfdc-9bc5-451b-9364-c5b9a7b0a516",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Login with invalid credentials - POM",
               "fullTitle": "All Login Tests Login with invalid credentials - POM",
               "timedOut": null,
-              "duration": 2732,
+              "duration": 1623,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "loginPage.enterUsername('Admin111');\nloginPage.enterPassword('admi23');\nloginPage.clickLogin();\nloginPage.checkInvalidCredentialsErrorMessage();",
               "err": {},
-              "uuid": "9f0a9dd7-bd66-477b-a8dc-750eb0715db0",
-              "parentUUID": "e9a064f6-151c-4465-bbc8-eaebe4b65284",
+              "uuid": "7635431c-1123-4e92-a5f6-44d7bfd693bc",
+              "parentUUID": "5f33bfdc-9bc5-451b-9364-c5b9a7b0a516",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4c2c01ae-bc3b-4788-b359-d2d19fac5eff",
-            "9f0a9dd7-bd66-477b-a8dc-750eb0715db0"
+            "80604d09-391a-41ad-a238-7d7e9f376e6d",
+            "7635431c-1123-4e92-a5f6-44d7bfd693bc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7993,
+          "duration": 5969,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

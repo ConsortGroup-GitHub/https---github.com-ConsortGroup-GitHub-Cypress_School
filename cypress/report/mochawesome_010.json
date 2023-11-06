@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T08:31:46.975Z",
-    "end": "2023-11-06T08:31:47.287Z",
-    "duration": 312,
+    "start": "2023-11-06T10:44:59.057Z",
+    "end": "2023-11-06T10:44:59.284Z",
+    "duration": 227,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "70b088db-1e10-461c-a68e-50dd404e6f10",
+      "uuid": "41e856b3-79f4-4dcc-ba73-b6f4a9753478",
       "title": "",
       "fullFile": "cypress\\e2e\\ApiTesting\\ParsingJsonResponse.cy.js",
       "file": "cypress\\e2e\\ApiTesting\\ParsingJsonResponse.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "759ff551-23dc-475f-acdc-4764e4cff6ba",
+          "uuid": "215fbfba-0269-4b11-8dd2-a142e182a70c",
           "title": "Parsing Json Response",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Parsing complex JSON response",
               "fullTitle": "Parsing Json Response Parsing complex JSON response",
               "timedOut": null,
-              "duration": 254,
+              "duration": 190,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "let totalprice = 0;\ncy.request({\n  method: 'GET',\n  url: \"https://fakestoreapi.com/products\",\n  qs: {\n    limit: 5\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  response.body.forEach(element => {\n    totalprice = totalprice + element.price;\n  });\n  expect(totalprice).to.eq(899.23);\n});",
               "err": {},
-              "uuid": "2a4f1699-a727-4daa-90ac-677155b7d2f2",
-              "parentUUID": "759ff551-23dc-475f-acdc-4764e4cff6ba",
+              "uuid": "12c5bdbd-52b3-4ee8-ab38-d58158bb5373",
+              "parentUUID": "215fbfba-0269-4b11-8dd2-a142e182a70c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2a4f1699-a727-4daa-90ac-677155b7d2f2"
+            "12c5bdbd-52b3-4ee8-ab38-d58158bb5373"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 254,
+          "duration": 190,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

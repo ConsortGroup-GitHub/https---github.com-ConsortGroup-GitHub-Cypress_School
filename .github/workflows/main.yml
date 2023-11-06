@@ -25,7 +25,7 @@ jobs:
       run: npm install
 
     - name: Run Cypress Tests
-      run: npm run cy-test-reporter  # Bien s assurer que cette commande existe dans le package.json
+      run: npm run test  # Bien s assurer que cette commande existe dans le package.json
 
     - name: Upload Test Artifacts
       if: failure() 
