@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T10:44:24.036Z",
-    "end": "2023-11-06T10:44:32.257Z",
-    "duration": 8221,
+    "start": "2023-11-09T07:59:16.030Z",
+    "end": "2023-11-09T07:59:24.985Z",
+    "duration": 8955,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c0542ffa-2fc9-4c1a-894f-1a18ca6d23f0",
+      "uuid": "f788b9d6-578f-4bc8-bf17-d103b458a84d",
       "title": "",
       "fullFile": "cypress\\e2e\\pomDemo.cy.js",
       "file": "cypress\\e2e\\pomDemo.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5f33bfdc-9bc5-451b-9364-c5b9a7b0a516",
+          "uuid": "44695fd9-bd32-4118-98d0-6a05add3f87d",
           "title": "All Login Tests",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login with valid credentials and Leave - POM",
               "fullTitle": "All Login Tests Login with valid credentials and Leave - POM",
               "timedOut": null,
-              "duration": 4346,
+              "duration": 4601,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "loginPage.enterUsername('Admin');\nloginPage.enterPassword('admin123');\nloginPage.clickLogin();\nhomePage.Leave();",
               "err": {},
-              "uuid": "80604d09-391a-41ad-a238-7d7e9f376e6d",
-              "parentUUID": "5f33bfdc-9bc5-451b-9364-c5b9a7b0a516",
+              "uuid": "cf616046-5541-4063-b630-b80ad2d8bca1",
+              "parentUUID": "44695fd9-bd32-4118-98d0-6a05add3f87d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Login with invalid credentials - POM",
               "fullTitle": "All Login Tests Login with invalid credentials - POM",
               "timedOut": null,
-              "duration": 1623,
+              "duration": 1972,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "loginPage.enterUsername('Admin111');\nloginPage.enterPassword('admi23');\nloginPage.clickLogin();\nloginPage.checkInvalidCredentialsErrorMessage();",
               "err": {},
-              "uuid": "7635431c-1123-4e92-a5f6-44d7bfd693bc",
-              "parentUUID": "5f33bfdc-9bc5-451b-9364-c5b9a7b0a516",
+              "uuid": "05d64add-ef47-4ad9-b6d6-f77fe6c7830c",
+              "parentUUID": "44695fd9-bd32-4118-98d0-6a05add3f87d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "80604d09-391a-41ad-a238-7d7e9f376e6d",
-            "7635431c-1123-4e92-a5f6-44d7bfd693bc"
+            "cf616046-5541-4063-b630-b80ad2d8bca1",
+            "05d64add-ef47-4ad9-b6d6-f77fe6c7830c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5969,
+          "duration": 6573,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

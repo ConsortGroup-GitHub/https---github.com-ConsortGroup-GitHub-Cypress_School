@@ -10,7 +10,7 @@
     "cy-test": "cypress run",
     "cy-test-reporter": "cypress run --reporter mochawesome",
     "report:merge": "mochawesome-merge cypress/report/*.json > cypress/report1.json",
-    "report:generate": "marge cypress/report1.json --reportDir ./"
+    "report:generate": "marge cypress/report1.json --charts true"
   },
   "keywords": [],
   "author": "",

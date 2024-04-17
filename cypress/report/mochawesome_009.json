@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-11-06T10:44:56.881Z",
-    "end": "2023-11-06T10:44:57.339Z",
-    "duration": 458,
+    "failures": 1,
+    "start": "2023-11-09T07:59:50.822Z",
+    "end": "2023-11-09T07:59:51.566Z",
+    "duration": 744,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "96af9841-4615-4d0b-a0ce-33f47518a33f",
+      "uuid": "d8aaab3d-aafb-4dc7-a620-8626e97cd68c",
       "title": "",
       "fullFile": "cypress\\e2e\\ApiTesting\\JsonSchemaValidation.cy.js",
       "file": "cypress\\e2e\\ApiTesting\\JsonSchemaValidation.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b14652ea-787d-42ab-b1d7-d8598c73ff5b",
+          "uuid": "3b75e4f1-7c74-442a-9e0c-e9cc1fa29b54",
           "title": "Schema Validation",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Schema Validation against Response",
               "fullTitle": "Schema Validation Schema Validation against Response",
               "timedOut": null,
-              "duration": 420,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
+              "duration": 633,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.request({\n  method: 'GET',\n  url: 'https://fakestoreapi.com/products'\n}).then(response => {\n  var schema = {\n    \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n    \"title\": \"Generated schema for Root\",\n    \"type\": \"array\",\n    \"items\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"number\"\n        },\n        \"title\": {\n          \"type\": \"string\"\n        },\n        \"price\": {\n          \"type\": \"number\"\n        },\n        \"description\": {\n          \"type\": \"string\"\n        },\n        \"category\": {\n          \"type\": \"string\"\n        },\n        \"image\": {\n          \"type\": \"string\"\n        },\n        \"rating\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"rate\": {\n              \"type\": \"number\"\n            },\n            \"count\": {\n              \"type\": \"number\"\n            }\n          },\n          \"required\": [\"rate\", \"count\"]\n        }\n      },\n      \"required\": [\"id\", \"title\", \"price\", \"description\", \"category\", \"image\", \"rating\"]\n    }\n  };\n  const validate = ajv.compile(schema);\n  const isvalid = validate(response.body);\n  expect(isvalid).to.be.true;\n});",
-              "err": {},
-              "uuid": "019dccec-7241-46f9-8131-6ddcbb9abd3a",
-              "parentUUID": "b14652ea-787d-42ab-b1d7-d8598c73ff5b",
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://fakestoreapi.com/products'\n}).then(response => {\n  var schema = {\n    \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n    \"title\": \"Generated schema for Root\",\n    \"type\": \"array\",\n    \"items\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"number\"\n        },\n        \"title\": {\n          \"type\": \"string\"\n        },\n        \"comments\": {\n          \"type\": \"string\"\n        },\n        \"price\": {\n          \"type\": \"number\"\n        },\n        \"description\": {\n          \"type\": \"string\"\n        },\n        \"category\": {\n          \"type\": \"string\"\n        },\n        \"image\": {\n          \"type\": \"string\"\n        },\n        \"rating\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"rate\": {\n              \"type\": \"number\"\n            },\n            \"count\": {\n              \"type\": \"number\"\n            }\n          },\n          \"required\": [\"rate\", \"count\"]\n        }\n      },\n      \"required\": [\"id\", \"title\", \"comments\", \"price\", \"description\", \"category\", \"image\", \"rating\"]\n    }\n  };\n  const validate = ajv.compile(schema);\n  const isvalid = validate(response.body);\n  expect(isvalid).to.be.true;\n});",
+              "err": {
+                "message": "AssertionError: expected false to be true",
+                "estack": "AssertionError: expected false to be true\n    at Context.eval (webpack://cypress_school/./cypress/e2e/ApiTesting/JsonSchemaValidation.cy.js:75:34)",
+                "diff": null
+              },
+              "uuid": "2b1a544c-995d-40ff-b24b-bff0676bdf58",
+              "parentUUID": "3b75e4f1-7c74-442a-9e0c-e9cc1fa29b54",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "019dccec-7241-46f9-8131-6ddcbb9abd3a"
+          "passes": [],
+          "failures": [
+            "2b1a544c-995d-40ff-b24b-bff0676bdf58"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 420,
+          "duration": 633,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

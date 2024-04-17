@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T10:45:02.663Z",
-    "end": "2023-11-06T10:45:03.409Z",
-    "duration": 746,
+    "start": "2023-11-09T07:59:56.917Z",
+    "end": "2023-11-09T07:59:57.809Z",
+    "duration": 892,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "eb266eae-c3f1-43cf-90c8-e6fccd7517d6",
+      "uuid": "9cc116cc-1191-426c-b655-1e61ede59733",
       "title": "",
       "fullFile": "cypress\\e2e\\ApiTesting\\ParsingXMLResponse.cy.js",
       "file": "cypress\\e2e\\ApiTesting\\ParsingXMLResponse.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1cc5a600-7267-447b-be13-fa0918fd903c",
+          "uuid": "6befaeb4-6347-47ed-9f24-c78938643fe5",
           "title": "XML Parsing",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Get new Pet details",
               "fullTitle": "XML Parsing Get new Pet details",
               "timedOut": null,
-              "duration": 706,
+              "duration": 853,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: 'https://petstore.swagger.io/v2/pet/' + petId,\n  headers: {\n    'Accept': \"application/xml\"\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  parser.parseString(response.body, (err, result) => {\n    expect(result.Pet.id).to.eq(petId);\n    expect(result.Pet.name).to.eq('doggie');\n  });\n});",
               "err": {},
-              "uuid": "b43d13f5-978e-465c-bd9d-37e075e52a48",
-              "parentUUID": "1cc5a600-7267-447b-be13-fa0918fd903c",
+              "uuid": "1f6e6be6-9aae-43d5-8b45-f9011aed29fc",
+              "parentUUID": "6befaeb4-6347-47ed-9f24-c78938643fe5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b43d13f5-978e-465c-bd9d-37e075e52a48"
+            "1f6e6be6-9aae-43d5-8b45-f9011aed29fc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 706,
+          "duration": 853,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
